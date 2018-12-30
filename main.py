@@ -115,4 +115,11 @@ def decrypt_message(cipher_message):
     return msg
 
 
-print(decrypt_message(encrypt_message("this_was_all_copied_from_github")))
+msg = "your_private_key_is_seven_hundred_and_five"
+
+for pair in encrypt_message(msg):
+    for s in pair:
+        print(s[0], s[1], end=' ')
+    print()
+
+print(decrypt_message(encrypt_message(msg)))
