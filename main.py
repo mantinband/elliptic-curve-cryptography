@@ -119,7 +119,7 @@ msg = "your_private_key_is_seven_hundred_and_five"
 
 for pair in encrypt_message(msg):
     for s in pair:
-        print(s[0], s[1], end=' ')
-    print()
+        print(s[0], s[1], end=' ', file=open("cipher_text.txt", "a"))
+    print(file=open("cipher_text.txt", "a"))
 
 print(decrypt_message(encrypt_message(msg)))
